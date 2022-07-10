@@ -18,25 +18,23 @@
           </p>
 
           <p>
-            <strong>Salario min:</strong>
+            <strong>Salario mínimo:</strong>
             <%= @oferta.salario_min %>
           </p>
 
           <p>
-            <strong>Salario max:</strong>
+            <strong>Salario máximo:</strong>
             <%= @oferta.salario_max %>
           </p>
 
           <p>
-            <strong>Fecha inicio:</strong>
+            <strong>Fecha de inicio:</strong>
             <%= @oferta.fecha_inicio %>
           </p>
 
           <p>
             <strong>Modalidad de trabajo:</strong>
-            <%= if @oferta.modalidad_id = 3 then
-              alert "Mixto"%>
-              
+            <%= @oferta.modalidad_id %>
           </p>
           <% if empresa_signed_in? %> 
           <%= link_to "Editar", edit_oferta_path(@oferta) %>
