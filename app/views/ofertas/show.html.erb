@@ -34,7 +34,9 @@
 
           <p>
             <strong>Modalidad de trabajo:</strong>
-            <%= @oferta.modalidad_id %>
+            <%= if @oferta.modalidad_id = 3 then
+              alert "Mixto"%>
+              
           </p>
           <% if empresa_signed_in? %> 
           <%= link_to "Editar", edit_oferta_path(@oferta) %>
