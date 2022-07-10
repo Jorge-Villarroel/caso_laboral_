@@ -7,8 +7,8 @@
     <tr>
       <th>Cargo o Puesto</th>
       <th>Descripción</th>
-      <th>Cantidad de Vacantes</th>
       <th>Rango Salarial</th>
+      <th></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,6 +19,7 @@
         <td><%= oferta.cargo %></td>
         <td><%= oferta.descripcion %></td>
         <td>Entre $<%= oferta.salario_min %> a $<%= oferta.salario_max %> CLP.</td>
+        <td><%= "" %></td>
         <% if empresa_signed_in? %>
         <td><%= link_to "Ver", oferta, class: "btn btn-outline-dark" %></td>
         <td><%= link_to "Editar", edit_oferta_path(oferta), class: "btn btn-outline-dark" %></td>
