@@ -1,4 +1,4 @@
-puts "creando ofertas..."
+puts "Creando ofertas"
 
 Oferta.destroy_all
 Empresa.destroy_all
@@ -7,7 +7,6 @@ Genero.create([
   { nombre: "Masculino" },
   { nombre: "Femenino" },
   { nombre: "Otro" },
-  { nombre: "Prefiero no especificarlo" },
 ])
 
 Modalidad.create([
@@ -35,52 +34,33 @@ Region.create([
   { nombre: "Región Metropolitana de Santiago" },
 ])
 
-Empresa.create(
-  [
-    {
-      rut: "11111111-1",
-      email: "admin@aiep.cl",
-      password: 123456,
-      razon_social: "AIEP",
-      representante: "Ana",
-      direccion: "Calle Falsa 321",
-      telefono: 888888888,
-    },
-    {
-      rut: "22222222-2",
-      email: "admin@inacap.cl",
-      password: 123456,
-      razon_social: "Inacap",
-      representante: "Juan",
-      direccion: "Avenida Falsa 321",
-      telefono: 999999999,
-    },
-
-  ]
-)
 
 Persona.create(
   [
     {
-      rut: "33333333-1",
-      email: "usuario@uno.cl",
+      rut: "18319988-9",
+      email: "j.villarroel01@ufromail.cl",
       password: 123456,
-      nombre: "Usuario1",
-      fnac: "1988-04-25",
+      nombre: "Usuario_1",
+      fnac: "20-07-04",
       genero_id: 2,
-      telefono: 888888888,
+      telefono: 999127880,
       curriculum: "cv.pdf",
-    },
+    }
+  ]
+)
+
+Empresa.create(
+  [
     {
-      rut: "44444444-1",
-      email: "usuario@dos.cl",
+      rut: "96886110-7",
+      email: "infoweb@nttdata.com",
       password: 123456,
-      nombre: "Usuario2",
-      fnac: "1998-04-05",
-      genero_id: 1,
-      telefono: 888888888,
-      curriculum: "cv.docx",
-    },
+      razon_social: "NTT DATA CHILE S.A",
+      representante: "Inés Eusébio",
+      direccion: "Antonio Varas 989, Piso 4 y 7",
+      telefono: 938194823,
+    }
 
   ]
 )
@@ -88,39 +68,39 @@ Persona.create(
   Oferta.create(
     [
       {
-        cargo: "Programador",
-        descripcion: "Requerimos a estudiantes que necesiten realizar su practica para desarrollar un e-commerce",
-        cant_vacantes: 20,
+        cargo: "Ingeniero de desarrollo para plataformas informáticas IoT",
+        descripcion: "Ingeniero Civil Informático (con o sin título), para integrar el equipo de I&D de la empresa. El equipo se orienta a desarrollar aplicaciones informáticas que procesan, despliegan y reportan información de los dispositivos electrónicos que AIKOLOGIC fabrica para la Gran Minería. Estos desarrollos aplican tanto a dispositivos electrónicos fabricados por la empresa, como a la integración de las tecnologías disponibles en el mercado, habilitando plataformas e interfaces de conectividad, a fin de proporcionar óptimas soluciones a problemas complejos planteados por nuestros clientes.",
+        cant_vacantes: 2,
         salario_min: 1100000,
-        salario_max: 1500000,
+        salario_max: 1400000,
 		modalidad_id: 2,
 		region_id: 11,
         fecha_inicio: "2022-07-04 17:55:01",
       },
       {
-        cargo: "Informático",
-        descripcion: "Estamos buscando interesados en desarrollar y mantener nuestro ERP",
+        cargo: "Analista de desarrollo/ Informático",
+        descripcion: "Buscamos un profesional que nos ayude a explorar nuevas alternativas en proyectos de Geolocalización Indoor mediante sistema NFC, bluetooth entre otros que tenga una visión divergente con creatividad e innovación, orientado al desarrollo.",
         cant_vacantes: 6,
-        salario_min: 800000,
-        salario_max: 900000,
+        salario_min: 950000,
+        salario_max: 1200000,
 		modalidad_id: 3,
 		region_id: 11,
         fecha_inicio: "2022-07-03 17:55:01",
       },
       {
-        cargo: "Maquetador Web Angular",
-        descripcion: "Precisamos incorporar a nuestro equipo 2 Maquetadores web con experiencia en Angular",
-        cant_vacantes: 6,
-        salario_min: 600000,
-        salario_max: 50000,
+        cargo: "Informático Administrativo de Nubeprint",
+        descripcion: "Buscamos personas como tú, para apoyarnos en nuestras mesas de Atención técnica con entusiasmo, que sientan como su cliente, que inspire y movilice, liderando los cambios con excelencia en los resultados.",
+        cant_vacantes: 1,
+        salario_min: 750000,
+        salario_max: 900000,
 		modalidad_id: 1,
 		region_id: 11,
         fecha_inicio: "2022-07-02 17:55:01",
       },
       {
-        cargo: "Técnico de Apoyo",
-        descripcion: "Busco personal para el apoyo en el desarrollo de aplicaciónes web trabajando en equipo y bajo presión",
-        cant_vacantes: 8,
+        cargo: "Profesional de Sopote Informático",
+        descripcion: "Para nuestra área de informática, nos encontramos buscando un Administrador de Servidores Linux para incorporarse a un equipo de 4 personas que desarrollan actividades de soporte y programación, entre otros.",
+        cant_vacantes: 2,
         salario_min: 500000,
         salario_max: 700000,
 		modalidad_id: 2,
@@ -135,11 +115,11 @@ Persona.create(
   Oferta.create(
     [
       {
-        cargo: "Diseñador",
-        descripcion: "Se buscan front-end developer para realizar interfaces moviles a tiempo completo.",
-        cant_vacantes: 5,
-        salario_min: 350000,
-        salario_max: 550000,
+        cargo: "Desarrollador programador Ingeniero Informático",
+        descripcion: "Empresa del rubro informática requiere contratar DesarrolladorProgramador para proyecto en el área de TELCO. Se requiere experiencia laboral de dos años en áreas de programación y QA y conocimientos en los siguientes lenguajes JAVA.",
+        cant_vacantes: 2,
+        salario_min: 1400000,
+        salario_max: 1600000,
 		modalidad_id: 2,
 		region_id: 11,
         fecha_inicio: "2022-06-30 17:55:01",
@@ -149,4 +129,4 @@ Persona.create(
   )
 end
 
-puts "finalizado!!!"
+puts "Finalizado!"
