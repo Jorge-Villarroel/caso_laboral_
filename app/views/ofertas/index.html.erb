@@ -43,4 +43,8 @@
 <%= link_to "Agregar nueva oferta", new_oferta_path, class: "btn btn-outline-dark" %>
 <% end %>
 
+<% if persona_signed_in? %>
+<%= link_to "Ver mis postulaciones", new_oferta_path, class: "btn btn-outline-dark" %>
+<% end %>
+
 
