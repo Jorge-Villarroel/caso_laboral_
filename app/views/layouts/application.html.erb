@@ -21,7 +21,7 @@
         <% elsif persona_signed_in? %>
             <div>
                 <%= link_to "Inicio", root_path, class: "btn btn-outline-dark" %>
-                <%= link_to "Perfil", edit_persona_registration_path, class: "btn btn-outline-dark" %> 
+                <%= link_to "Editar Perfil", edit_persona_registration_path, class: "btn btn-outline-dark" %> 
                 <%= link_to "Cerrar Sesión", destroy_persona_session_path, method: :delete, class: "btn btn-outline-dark" %>
             </div>
         <% else %>
